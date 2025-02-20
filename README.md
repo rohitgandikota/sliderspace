@@ -1,6 +1,5 @@
 # SliderSpace: Decomposing the Visual Capabilities of Diffusion Models
-### [Project Website](https://sliderspace.baulab.info) | [Paper](https://arxiv.org/pdf/2502.01639) | [Trained SliderSpaces](https://sliderspace.baulab.info/) 
-<!-- | [Huggingface Demo](https://huggingface.co/spaces/baulab/SliderSpace) -->
+### [Project Website](https://sliderspace.baulab.info) | [Paper](https://arxiv.org/pdf/2502.01639) | [Trained Weights](https://sliderspace.baulab.info/sliderspace_weights/) | [Huggingface Demo](https://huggingface.co/spaces/baulab/SliderSpace)
 
 Official implementation of "SliderSpace: Decomposing the Visual Capabilities of Diffusion Models"
 ***Unlock the creativity of diffusion models and get sliders to control the creative concepts!*** <br>
