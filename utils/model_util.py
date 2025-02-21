@@ -426,17 +426,22 @@ def load_models_flux(params):
     text_encoder_one, text_encoder_two = load_text_encoders(params['pretrained_model_name_or_path'], text_encoder_cls_one, text_encoder_cls_two, params['weight_dtype'])
     
     # Load VAE
-    vae = AutoencoderKL.from_pretrained(
-        params['pretrained_model_name_or_path'],
-        subfolder="vae",
-        torch_dtype=params['weight_dtype'], device_map='auto'
+    # vae = AutoencoderKL.from_pretrained(
+    #     params['pretrained_model_name_or_path'],
+    #     subfolder="vae",
+    #     torch_dtype=params['weight_dtype'], device_map='auto'
+    # )
+    vae = AutoencoderTiny.from_pretrained(
+        "madebyollin/taef1", 
+        torch_dtype=params['weight_dtype']
     )
+    vae = vae.to(params['device'])
     transformer = FluxTransformer2DModel.from_pretrained(
         params['pretrained_model_name_or_path'], 
         subfolder="transformer", 
         torch_dtype=params['weight_dtype']
     )
-    
+   
     # We only train the additional adapter LoRA layers
     transformer.requires_grad_(False)
     vae.requires_grad_(False)
