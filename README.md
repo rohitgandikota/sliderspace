@@ -32,7 +32,7 @@ python train_sdxl.py \
     --exp_name "spaceship" \
     --distilled_ckpt "dmd2" \
     --num_sliders 10 \
-    --clip_num_samples 1000 \
+    --clip_total_samples 1000 \
 ```
 You can train 32 sliders under *90 mins* on A6000 GPU! For comparison training 16 Concept Sliders can take upto 480 mins. For more stable discovery increase the `--clip_num_samples 10000` this will slow down the discovery process, but you will get far robust directions.
 
@@ -44,7 +44,7 @@ python train_flux.py \
     --concept_prompts "picture of a wizard" \
     --exp_name "wizard" \
     --num_sliders 10 \
-    --clip_num_samples 1000 \
+    --clip_total_samples 1000 \
     --clip_batch_size 1 \ 
 ```
 FLUX discovery takes around *~120 mins* on A100 GPU to discover 32 directions. Increase `clip_batch_size` if you have enough VRAM. For more stable discovery increase the `--clip_num_samples 10000` this will slow down the discovery process, but you will get far robust directions.
