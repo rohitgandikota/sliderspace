@@ -37,6 +37,9 @@ python train_sdxl.py \
 You can train 32 sliders under *90 mins* on A6000 GPU! For comparison training 16 Concept Sliders can take upto 480 mins. For more stable discovery increase the `--clip_total_samples 10000` this will slow down the discovery process, but you will get far robust directions.
 
 ## FLUX Sliderspace
+<div align='center'>
+<img src = 'images/image.png'>
+</div>
 To discover SliderSpace directions for a concept inside FLUX models use the following script
 
 ```bash
